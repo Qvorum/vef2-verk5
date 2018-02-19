@@ -11,5 +11,4 @@ with urllib.request.urlopen("http://apis.is/concerts") as url:
 @route('/')
 def index():
     return template('index.tpl', data=gogn)
-
-run()
+run(host='0.0.0.0', port=os.environ.get('PORT'))
